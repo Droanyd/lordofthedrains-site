@@ -3,10 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Lord of the Drains — professional plumbing services. Fast, clean, reliable. Call or email to book." />
+  <meta name="description" content="Lord of the Drains — professional plumbing services in Zuid Holland. Based in Vlaardingen. Clear pricing, fast response, reliable workmanship." />
+  <meta name="theme-color" content="#0f1115" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Lord of the Drains | Plumbing in Zuid Holland" />
+  <meta property="og:description" content="One Plumber to Fix It All. Based in Vlaardingen — serving Rotterdam, Den Haag, Delft, Schiedam, Maassluis, Naaldwijk, Spijkenisse, Hoogvliet." />
+  <meta property="og:type" content="website" />
+
   <title>Lord of the Drains | Plumbing</title>
 
-  <!-- Classic, professional typography with a subtle “legendary” feel -->
+  <!-- Fonts (classic + modern) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,63 +25,88 @@
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Lord of the Drains home">
-        <span class="ring" aria-hidden="true"></span>
+        <!-- Minimalist LOTR-inspired logo: ring + wrench (original SVG) -->
+        <span class="logo" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 64 64" role="img" focusable="false">
+            <!-- Ring -->
+            <circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="3.2" />
+            <circle cx="32" cy="32" r="12.2" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="2" />
+            <!-- Wrench (simple, geometric) -->
+            <path d="M43.8 18.8c-2.9 2.9-7.1 3.6-10.7 2l-9.7 9.7 4.2 4.2 9.7-9.7c-1.6-3.6-.9-7.8 2-10.7 2.2-2.2 5.3-3 8.2-2.4l-4.6 4.6 2.9 2.9 4.6-4.6c.6 2.9-.2 6-2.4 8.2z"
+                  fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Small “spark” dot (subtle accent) -->
+            <circle cx="18.5" cy="45.8" r="1.6" fill="currentColor" opacity="0.85"/>
+          </svg>
+        </span>
+
         <span class="brand-text">
           <span class="brand-name">Lord of the Drains</span>
           <span class="brand-sub">Plumbing • Repairs • Installations</span>
         </span>
       </a>
 
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
         <a href="#services">Services</a>
+        <a href="#work">Past Work</a>
         <a href="#about">About</a>
-        <a href="#contact" class="btn btn-small">Contact</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
       <div class="container hero-inner">
         <div class="hero-copy">
+          <p class="eyebrow">Based in Vlaardingen • Serving Zuid Holland</p>
+
           <h1>Swift, tidy plumbing — done right the first time.</h1>
+
           <p class="lead">
-            Minimal fuss. Clear pricing. Reliable workmanship.
-            <span class="subtle">A little legendary, in the best way.</span>
+            <span class="motto">One Plumber to Fix It All.</span>
+            From everyday leaks to urgent repairs, I provide clean, reliable plumbing across Zuid Holland —
+            with clear pricing, fast response, and workmanship you can count on.
           </p>
+
+          <div class="service-area">
+            <strong>Service area:</strong>
+            Rotterdam · Den Haag · Delft · Schiedam · Vlaardingen · Maassluis · Naaldwijk · Spijkenisse · Hoogvliet
+          </div>
 
           <div class="cta">
             <!-- Replace with your real phone/email -->
-            <a class="btn" href="tel:+351900000000">Call: +351 900 000 000</a>
+            <a class="btn" href="tel:+31000000000">Call: +31 00 000 0000</a>
             <a class="btn btn-ghost" href="mailto:hello@lordofthedrains.com">Email: hello@lordofthedrains.com</a>
           </div>
 
-          <div class="badges">
+          <div class="badges" aria-label="Highlights">
             <span class="badge">Same-day options</span>
             <span class="badge">Clean & respectful</span>
             <span class="badge">Residential & small commercial</span>
           </div>
         </div>
 
-        <div class="hero-card">
+        <aside class="hero-card" aria-label="Quick service list">
           <div class="card">
             <h2 class="card-title">What I can help with</h2>
             <ul class="checklist">
               <li>Clogged drains & slow sinks</li>
               <li>Leak detection & repairs</li>
               <li>Tap / toilet repairs & replacements</li>
-              <li>Water heater & appliance connections</li>
-              <li>Pipework fixes & small installs</li>
+              <li>High-pressure jetting (when appropriate)</li>
+              <li>Pipework fixes & small installations</li>
             </ul>
             <p class="card-note">
-              <strong>Emergency?</strong> Call — if I can’t take it immediately, I’ll respond quickly with the next best option.
+              <strong>Urgent issue?</strong> Call — if I can’t take it immediately, I’ll respond quickly with the next best option.
             </p>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <!-- SERVICES -->
+    <section id="services" class="section" aria-label="Services">
       <div class="container">
         <div class="section-head">
           <h2>Services</h2>
@@ -92,25 +124,59 @@
           </div>
           <div class="tile">
             <h3>Installations</h3>
-            <p>Taps, toilets, sinks, dishwashers, washing machines, valves.</p>
+            <p>Taps, toilets, sinks, appliances, valves — done neatly and safely.</p>
           </div>
           <div class="tile">
-            <h3>Maintenance</h3>
-            <p>Preventive checks and small fixes to avoid big future issues.</p>
+            <h3>High-Pressure Jetting</h3>
+            <p>When a clog is stubborn, jetting can restore flow effectively.</p>
           </div>
           <div class="tile">
-            <h3>Small Projects</h3>
-            <p>Bathroom refresh work, rerouting short pipe runs, upgrades.</p>
+            <h3>Pipework & Replacements</h3>
+            <p>Corroded or old pipes replaced to improve reliability and pressure.</p>
           </div>
           <div class="tile">
-            <h3>Quotes</h3>
-            <p>Clear and simple — what needs doing, what it costs, and why.</p>
+            <h3>Clear Quotes</h3>
+            <p>Simple and transparent — what needs doing, what it costs, and why.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section alt">
+    <!-- PAST WORK -->
+    <section id="work" class="section alt" aria-label="Past work examples">
+      <div class="container">
+        <div class="section-head">
+          <h2>Examples of Recent Work</h2>
+          <p>Real scenarios we’ve handled — described simply and professionally.</p>
+        </div>
+
+        <div class="work-cards">
+          <article class="work-card">
+            <h3>Bathroom Flow Restored</h3>
+            <p>Replaced old pipes and cleared stubborn blockages to restore smooth water flow in a busy family bathroom.</p>
+          </article>
+          <article class="work-card">
+            <h3>Jetting: Drains Running Like New</h3>
+            <p>Used high-pressure water jets to clear years of buildup, leaving drains running like new.</p>
+          </article>
+          <article class="work-card">
+            <h3>Burst Pipe — Rapid Response</h3>
+            <p>Responded quickly to a burst pipe, minimizing water damage and fixing the issue on the spot.</p>
+          </article>
+          <article class="work-card">
+            <h3>Older Home Pipe Replacement</h3>
+            <p>Swapped out corroded pipes in an older home to ensure reliable water pressure and long-term safety.</p>
+          </article>
+        </div>
+
+        <p class="tiny subtle-note">
+          No stock photos, no exaggeration — just straightforward work and honest service.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-label="About">
       <div class="container">
         <div class="section-head">
           <h2>About</h2>
@@ -120,59 +186,130 @@
         <div class="about">
           <div class="about-text">
             <p>
-              Hi — I’m <strong>[Your Name]</strong>. I provide plumbing services under <strong>Lord of the Drains</strong>.
-              I focus on practical fixes, tidy work, and clear communication.
+              Hi — I’m <strong>[Your Name]</strong>, the plumber behind <strong>Lord of the Drains</strong>.
+              Based in Vlaardingen, I provide dependable plumbing services across Zuid Holland with a focus on
+              practical solutions, tidy work, and clear communication.
             </p>
+
             <p>
-              <strong>Background:</strong> [Add 3–5 lines about your experience: years in the trade, types of work, certifications, etc.]
+              <strong>Background:</strong> [Add 3–5 lines here: years of experience, types of jobs, training/certifications, etc.]
             </p>
+
             <p class="subtle">
-              The name is a light nod to a beloved fantasy trilogy — but the service is very real: dependable plumbing with a calm, professional approach.
+              The name is a light tribute to a favourite trilogy — just a hint of adventure.
+              No magic rings here, only solid craftsmanship.
             </p>
           </div>
 
-          <div class="about-card card">
+          <aside class="about-card card">
             <h3>Service details</h3>
             <ul class="meta">
-              <li><span>Area:</span> <strong>[Your city/area]</strong></li>
-              <li><span>Hours:</span> <strong>[e.g., Mon–Sat 08:00–18:00]</strong></li>
-              <li><span>Languages:</span> <strong>English / Portuguese</strong></li>
+              <li><span>Base:</span> <strong>Vlaardingen</strong></li>
+              <li><span>Area:</span> <strong>Zuid Holland</strong></li>
+              <li><span>Hours:</span> <strong>[Mon–Sat 08:00–18:00]</strong></li>
+              <li><span>Languages:</span> <strong>English / Dutch</strong></li>
               <li><span>Insurance:</span> <strong>[Yes/No]</strong></li>
             </ul>
             <p class="tiny">
-              *If you’re licensed/insured, mention it clearly — it improves trust a lot.
+              Tip: If you’re licensed/insured, mention it clearly — it improves trust a lot.
             </p>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-label="Contact">
       <div class="container">
         <div class="section-head">
           <h2>Contact</h2>
-          <p>Call or email — I’ll reply as fast as possible.</p>
+          <p>Call, email — or send a message using the form below.</p>
         </div>
 
-        <div class="contact">
-          <a class="contact-card" href="tel:+351900000000">
-            <span class="kicker">Phone</span>
-            <span class="value">+351 900 000 000</span>
-            <span class="hint">Tap to call</span>
-          </a>
+        <div class="contact-grid">
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:+31000000000">
+              <span class="kicker">Phone</span>
+              <span class="value">+31 00 000 0000</span>
+              <span class="hint">Tap to call</span>
+            </a>
 
-          <a class="contact-card" href="mailto:hello@lordofthedrains.com">
-            <span class="kicker">Email</span>
-            <span class="value">hello@lordofthedrains.com</span>
-            <span class="hint">Tap to email</span>
-          </a>
+            <a class="contact-card" href="mailto:hello@lordofthedrains.com">
+              <span class="kicker">Email</span>
+              <span class="value">hello@lordofthedrains.com</span>
+              <span class="hint">Tap to email</span>
+            </a>
+
+            <div class="contact-card contact-note">
+              <span class="kicker">Service area</span>
+              <span class="value value-sm">
+                Rotterdam · Den Haag · Delft · Schiedam · Vlaardingen · Maassluis · Naaldwijk · Spijkenisse · Hoogvliet
+              </span>
+              <span class="hint">Zuid Holland (NL)</span>
+            </div>
+          </div>
+
+          <!-- Simple static-site form via Formspree -->
+          <div class="form-card card">
+            <h3>Send a message</h3>
+            <p class="tiny form-help">
+              Replace the <code>action</code> URL below with your Formspree endpoint (free).
+              See setup instructions after the code.
+            </p>
+
+            <form class="form" action="https://formspree.io/f/yourFormID" method="POST">
+              <div class="form-row">
+                <label>
+                  <span>Name</span>
+                  <input name="name" type="text" autocomplete="name" required placeholder="Your name" />
+                </label>
+
+                <label>
+                  <span>Email</span>
+                  <input name="email" type="email" autocomplete="email" required placeholder="your@email.com" />
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  <span>City</span>
+                  <input name="city" type="text" autocomplete="address-level2" placeholder="e.g., Rotterdam" />
+                </label>
+
+                <label>
+                  <span>Type of issue</span>
+                  <select name="issue">
+                    <option value="Drain clog">Drain clog</option>
+                    <option value="Leak">Leak</option>
+                    <option value="Burst pipe">Burst pipe</option>
+                    <option value="Installation">Installation</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" required placeholder="Describe the problem, address (optional), and when you need help."></textarea>
+              </label>
+
+              <!-- Honeypot anti-spam field (invisible) -->
+              <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
+
+              <button class="btn" type="submit">Send message</button>
+
+              <p class="tiny subtle-note">
+                Prefer email? Write to <a href="mailto:hello@lordofthedrains.com">hello@lordofthedrains.com</a>.
+              </p>
+            </form>
+          </div>
         </div>
 
-        <div class="footnote">
+        <footer class="footnote">
           <p class="tiny">
             © <span id="year"></span> Lord of the Drains. All rights reserved.
           </p>
-        </div>
+        </footer>
       </div>
     </section>
   </main>

@@ -54,8 +54,8 @@ code{ color: #e6d39b; }
 
 
 .logo-img{
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   display: block;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(199,162,75,.12));

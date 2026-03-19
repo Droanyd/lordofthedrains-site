@@ -338,3 +338,53 @@ textarea{ resize: vertical; }
   .form-row{ grid-template-columns: 1fr; }
   .nav{ gap: 8px; }
 }
+
+
+/* --- Mobile header overflow fix (add at the very end) --- */
+@media (max-width: 520px) {
+
+  /* Allow header items to wrap to a second line */
+  .header-inner{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Put brand (logo + name) on its own row */
+  .brand{
+    width: 100%;
+  }
+
+  /* Make nav fit on screen; allow horizontal scroll if needed */
+  .nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+
+  .nav::-webkit-scrollbar{
+    height: 0; /* hide scrollbar on mobile */
+  }
+
+  /* Prevent “Contact” from wrapping and pushing out */
+  .nav a{
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  /* Optional: reduce logo slightly on very small screens */
+  .logo-img{
+    width: 64px;
+    height: 64px;
+  }
+
+  /* Optional: make subtitle smaller to save width */
+  .brand-sub{
+    font-size: 11px;
+  }
+}

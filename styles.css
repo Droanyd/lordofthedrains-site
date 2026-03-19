@@ -52,12 +52,12 @@ code{ color: #e6d39b; }
   color:inherit;
 }
 
-.logo{
+
+.logo-img{
   width: 40px;
   height: 40px;
-  color: var(--gold);
-  display:grid;
-  place-items:center;
+  display: block;
+  object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(199,162,75,.12));
 }
 
